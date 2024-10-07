@@ -2,7 +2,6 @@
 #
 # Author: Trevor Ablett and Jonathan Kelly
 # University of Toronto Institute for Aerospace Studies
-import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -12,6 +11,7 @@ from rotations import (
     skew_symmetric,
     Quaternion,
 )
+import fickling
 
 #### 1. Data ###################################################################################
 
@@ -20,7 +20,7 @@ from rotations import (
 # p1_data.pkl. For Part 3, you will use pt3_data.pkl.
 ################################################################################################
 with open("data/pt1_data.pkl", "rb") as file:
-    data = pickle.load(file)
+    data = fickling.load(file)
 
 ################################################################################################
 # Each element of the data dictionary is stored as an item from the data dictionary, which we
